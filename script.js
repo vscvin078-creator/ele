@@ -14,16 +14,12 @@ document.addEventListener('DOMContentLoaded', () => {
   let audioStarted = false;
 
   function startBirthdayAudio() {
-    if (!birthdayAudio) return;
+    if (!birthdayAudio || audioStarted) return;
 
-    birthdayAudio.muted = false;
-    birthdayAudio.volume = 0.7;
-
-    if (!audioStarted) {
-      birthdayAudio.currentTime = 0;
-      audioStarted = true;
-    }
-
+    birthdayAudio.muted = true;
+    birthdayAudio.volume = 0;
+    birthdayAudio.currentTime = 0;
+    audioStarted = true;
     birthdayAudio.play().catch(() => {});
   }
 
@@ -127,6 +123,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
   if (videoPlayer) {
     videoPlayer.addEventListener('play', () => {
+      videoPlayer.muted = false;
+      videoPlayer.volume = 1;
       startBirthdayAudio();
     });
 
