@@ -14,44 +14,22 @@ document.addEventListener('DOMContentLoaded', () => {
   let audioStarted = false;
 
   function startBirthdayAudio() {
-    if (audioStarted) return;
+    if (!birthdayAudio) return;
 
-    if (birthdayAudio) {
-      birthdayAudio.volume = 0.7;
+    birthdayAudio.muted = false;
+    birthdayAudio.volume = 0.7;
+
+    if (!audioStarted) {
       birthdayAudio.currentTime = 0;
-      birthdayAudio.play().catch(() => {});
-    }
-
-    const AudioContextClass = window.AudioContext || window.webkitAudioContext;
-    if (!AudioContextClass) {
       audioStarted = true;
-      return;
     }
 
-    const audioContext = new AudioContextClass();
-    const melody = [392, 523.25, 659.25, 523.25, 587.33, 783.99, 659.25, 587.33];
+    birthdayAudio.play().catch(() => {});
+  }
 
-    melody.forEach((frequency, index) => {
-      const startTime = audioContext.currentTime + index * 0.28;
-      const oscillator = audioContext.createOscillator();
-      const gainNode = audioContext.createGain();
-
-      oscillator.type = 'sine';
-      oscillator.frequency.setValueAtTime(frequency, startTime);
-
-      gainNode.gain.setValueAtTime(0.0001, startTime);
-      gainNode.gain.exponentialRampToValueAtTime(0.04, startTime + 0.04);
-      gainNode.gain.exponentialRampToValueAtTime(0.0001, startTime + 0.22);
-
-      oscillator.connect(gainNode);
-      gainNode.connect(audioContext.destination);
-
-      oscillator.start(startTime);
-      oscillator.stop(startTime + 0.26);
-    });
-
-    audioStarted = true;
-    audioContext.resume().catch(() => {});
+  function stopBirthdayAudio() {
+    if (!birthdayAudio) return;
+    birthdayAudio.pause();
   }
 
   function showWishPopup() {
@@ -88,13 +66,14 @@ document.addEventListener('DOMContentLoaded', () => {
     page?.classList.remove('hidden');
     unlockScene?.classList.add('hidden');
     launchConfetti();
-    startBirthdayAudio();
 
     if (videoPlayer) {
       videoPlayer.muted = false;
       videoPlayer.volume = 1;
       videoPlayer.play().catch(() => {});
     }
+
+    startBirthdayAudio();
 
     setTimeout(showWishPopup, 250);
 
@@ -138,6 +117,19 @@ document.addEventListener('DOMContentLoaded', () => {
       hideWishPopup();
     }
   });
+
+  if (videoPlayer) {
+    videoPlayer.addEventListener('play', () => {
+      startBirthdayAudio();
+    });
+
+    videoPlayer.addEventListener('pause', () => {
+      if (birthdayAudio && !videoPlayer.paused) {
+        return;
+      }
+      stopBirthdayAudio();
+    });
+  }
 });
 
 const style = document.createElement('style');
