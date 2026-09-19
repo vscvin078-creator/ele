@@ -1,0 +1,62 @@
+<svg width="900" height="600" viewBox="0 0 900 600" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="900" y2="600" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#EAF7FF"/>
+      <stop offset="0.45" stop-color="#DDEEFF"/>
+      <stop offset="1" stop-color="#CFE3FF"/>
+    </linearGradient>
+    <linearGradient id="gift" x1="280" y1="210" x2="620" y2="440" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFBFD8"/>
+      <stop offset="1" stop-color="#FF9EC0"/>
+    </linearGradient>
+    <linearGradient id="body" x1="310" y1="250" x2="590" y2="470" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#D7E8FF"/>
+      <stop offset="1" stop-color="#AED0FF"/>
+    </linearGradient>
+    <linearGradient id="ribbon" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#FFF5B8"/>
+      <stop offset="1" stop-color="#FFE98F"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="900" height="600" fill="url(#bg)"/>
+  <circle cx="130" cy="110" r="76" fill="#FFFFFF" fill-opacity="0.3"/>
+  <circle cx="740" cy="120" r="92" fill="#FFFFFF" fill-opacity="0.24"/>
+  <circle cx="770" cy="470" r="120" fill="#D5E9FF" fill-opacity="0.6"/>
+
+  <g opacity="0.9">
+    <path d="M150 420C190 350 215 270 260 220C285 193 315 175 345 180C335 205 311 221 296 243C279 268 276 300 294 333C320 380 370 409 396 453C342 479 189 488 150 420Z" fill="#FFD6A8" fill-opacity="0.7"/>
+    <path d="M718 389C666 350 639 322 617 266C601 222 616 176 650 161C667 200 699 221 726 249C752 277 760 313 742 350C722 395 706 431 718 389Z" fill="#D5D1FF" fill-opacity="0.75"/>
+  </g>
+
+  <g>
+    <text x="450" y="135" text-anchor="middle" font-family="Verdana, Arial, sans-serif" font-size="34" fill="#4969A7" letter-spacing="7">HAPPY BIRTHDAY</text>
+    <text x="450" y="205" text-anchor="middle" font-family="Verdana, Arial, sans-serif" font-size="76" font-weight="700" fill="#2D4B8B">ELEORA</text>
+  </g>
+
+  <g>
+    <rect x="300" y="225" width="300" height="180" rx="26" fill="url(#body)"/>
+    <rect x="265" y="200" width="370" height="48" rx="18" fill="url(#gift)"/>
+    <rect x="430" y="170" width="40" height="230" rx="18" fill="url(#ribbon)"/>
+    <rect x="300" y="308" width="300" height="40" rx="18" fill="url(#ribbon)"/>
+    <rect x="350" y="250" width="30" height="150" rx="12" fill="#FFFFFF" fill-opacity="0.18"/>
+    <rect x="520" y="250" width="30" height="150" rx="12" fill="#FFFFFF" fill-opacity="0.18"/>
+  </g>
+
+  <g fill="#FF89A9" font-family="Verdana, Arial, sans-serif" font-size="48">
+    <text x="220" y="160">♡</text>
+    <text x="640" y="188">♥</text>
+    <text x="705" y="300">✦</text>
+    <text x="185" y="330">✧</text>
+  </g>
+
+  <g fill="#FFF7C2" font-family="Verdana, Arial, sans-serif" font-size="44" opacity="0.9">
+    <text x="700" y="120">★</text>
+    <text x="180" y="256">✦</text>
+    <text x="700" y="430">✹</text>
+  </g>
+
+  <g>
+    <text x="450" y="520" text-anchor="middle" font-family="Verdana, Arial, sans-serif" font-size="28" fill="#4969A7" letter-spacing="3">YOU DESERVE A BEAUTIFUL DAY</text>
+  </g>
+</svg>
