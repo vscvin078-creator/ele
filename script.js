@@ -90,7 +90,7 @@ document.addEventListener('DOMContentLoaded', () => {
     void giftBox.offsetWidth;
     giftBox.classList.add('shake');
 
-    if (tapCount >= 3) {
+    if (tapCount >= 1) {
       giftBox.classList.add('burst');
       setTimeout(() => {
         revealBirthdayPage();
@@ -98,15 +98,20 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }
 
-  unlockScene?.addEventListener('click', handleGiftTap);
-  unlockScene?.addEventListener('pointerdown', handleGiftTap);
-  giftBox?.addEventListener('click', handleGiftTap);
-  giftBox?.addEventListener('keydown', (event) => {
-    if (event.key === 'Enter' || event.key === ' ') {
-      event.preventDefault();
-      handleGiftTap();
-    }
-  });
+  if (giftBox) {
+    giftBox.addEventListener('click', handleGiftTap);
+    giftBox.addEventListener('pointerdown', handleGiftTap);
+    giftBox.addEventListener('keydown', (event) => {
+      if (event.key === 'Enter' || event.key === ' ') {
+        event.preventDefault();
+        handleGiftTap();
+      }
+    });
+  }
+
+  setTimeout(() => {
+    handleGiftTap();
+  }, 900);
 
   cta?.addEventListener('click', () => {
     const title = document.querySelector('h1');
