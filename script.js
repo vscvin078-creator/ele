@@ -131,9 +131,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     videoPlayer.addEventListener('pause', () => {
-      if (birthdayAudio && !videoPlayer.paused) {
-        return;
-      }
       stopBirthdayAudio();
     });
   }
