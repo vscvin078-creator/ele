@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HBD Eleora</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Quicksand:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="unlock-scene" id="unlockScene" aria-label="Open me!">
+      <div class="gift-box" id="giftBox" role="button" tabindex="0" aria-label="Open me!">
+        <div class="gift-lid"></div>
+        <div class="gift-body"></div>
+        <div class="gift-ribbon ribbon-horizontal"></div>
+        <div class="gift-ribbon ribbon-vertical"></div>
+        <div class="gift-label">Open me!</div>
+      </div>
+    </div>
+
+    <div class="page-shell hidden" id="birthdayPage">
+      <div class="confetti-layer" aria-hidden="true"></div>
+      <div class="bg-orb orb-one"></div>
+      <div class="bg-orb orb-two"></div>
+      <div class="bg-orb orb-three"></div>
+
+      <div class="sparkles" aria-hidden="true">
+        <span></span><span></span><span></span><span></span><span></span>
+        <span></span><span></span><span></span><span></span><span></span>
+      </div>
+
+      <div class="floating-ornaments" aria-hidden="true">
+        <span class="ornament item-one">✦</span>
+        <span class="ornament item-two">♡</span>
+        <span class="ornament item-three">✧</span>
+        <span class="ornament item-four">❀</span>
+        <span class="ornament item-five">★</span>
+        <span class="ornament item-six">❤</span>
+        <span class="ornament item-seven">✦</span>
+        <span class="ornament item-eight">♡</span>
+        <span class="balloon balloon-one"></span>
+        <span class="balloon balloon-two"></span>
+        <span class="balloon balloon-three"></span>
+        <span class="balloon balloon-four"></span>
+        <span class="flower flower-one"></span>
+        <span class="flower flower-two"></span>
+        <span class="flower flower-three"></span>
+      </div>
+
+      <div class="wish-popup" id="wishPopup" aria-live="polite">
+        <div class="wish-card">
+          <button class="close-popup" aria-label="Tutup">×</button>
+          <p class="wish-title">Happy Birthday, Eleee! 🎂</p>
+          <p>Semoga tahun ini dipenuhi hal-hal seru, kabar baik, dan apa pun yang kamu kejar bisa tercapai.</p>
+          <p>Enjoy your day, you deserve a good one :)</p>
+          <p class="wish-signature">— someone :p</p>
+        </div>
+      </div>
+
+      <div class="phone-screen">
+        <header class="topbar">
+          <div class="brand">ELEORA</div>
+          <button class="cta">Wish</button>
+        </header>
+
+        <main class="hero">
+          <section class="feature-card">
+            <div class="status-pill">Happy Birthday</div>
+            <h1><span>ELEORA ANABELLE</span></h1>
+            <p class="subtitle">
+              A little something for your special day ✦
+            </p>
+          </section>
+        </main>
+
+        <section class="video-box" aria-label="tempat video">
+          <div class="video-header">
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+          </div>
+          <video class="video-player" controls playsinline loop preload="metadata" poster="https://images.unsplash.com/photo-1529156069898-49953e39b3ac?auto=format&fit=crop&w=900&q=80">
+            <source src="/upscaled-video.mp4" type="video/mp4" />
+            Browsermu tidak mendukung video tag.
+          </video>
+        </section>
+
+        <section class="gift-grid" aria-label="birthday wishes cards">
+          <article class="gift-card">
+            <span class="number">01</span>
+            <h4>Happy</h4>
+            <p>Selalu tersenyum dan bahagia di setiap langkah.</p>
+          </article>
+          <article class="gift-card">
+            <span class="number">02</span>
+            <h4>Bright</h4>
+            <p>Terus bersinar dengan hati yang tenang dan kuat.</p>
+          </article>
+          <article class="gift-card">
+            <span class="number">03</span>
+            <h4>Dream</h4>
+            <p>Mimpi-mimpimu semoga jadi nyata dengan cara terbaik.</p>
+          </article>
+        </section>
+
+        <section class="message-panel">
+          <p class="eyebrow">For the one who lights up every heart</p>
+          <p class="closing-text">Tetap jadi diri yang lembut, kuat, dan selalu menebar kebahagiaan, ELEORA ANABELLE.</p>
+        </section>
+      </div>
+    </div>
+
+    <audio id="birthdayAudio" preload="auto" loop>
+      <source src="/audio.mp3" type="audio/mpeg" />
+      Browsermu tidak mendukung audio tag.
+    </audio>
+    <script src="script.js"></script>
+  </body>
+</html>
