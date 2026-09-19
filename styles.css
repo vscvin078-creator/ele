@@ -38,6 +38,7 @@ body {
   place-items: center;
   background: radial-gradient(circle at top, #edf7ff 0%, #dfeeff 38%, #cfe3ff 100%);
   z-index: 50;
+  pointer-events: auto;
   transition: opacity 0.8s ease, visibility 0.8s ease;
 }
 
@@ -52,6 +53,9 @@ body {
   width: 220px;
   height: 170px;
   cursor: pointer;
+  pointer-events: auto;
+  user-select: none;
+  touch-action: manipulation;
   transition: transform 0.2s ease;
   animation: floatBox 2.5s ease-in-out infinite;
 }

@@ -99,6 +99,8 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   unlockScene?.addEventListener('click', handleGiftTap);
+  unlockScene?.addEventListener('pointerdown', handleGiftTap);
+  giftBox?.addEventListener('click', handleGiftTap);
   giftBox?.addEventListener('keydown', (event) => {
     if (event.key === 'Enter' || event.key === ' ') {
       event.preventDefault();
