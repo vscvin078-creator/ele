@@ -86,7 +86,7 @@ document.addEventListener('DOMContentLoaded', () => {
     void giftBox.offsetWidth;
     giftBox.classList.add('shake');
 
-    if (tapCount >= 1) {
+    if (tapCount >= 3) {
       giftBox.classList.add('burst');
       setTimeout(() => {
         revealBirthdayPage();
@@ -104,10 +104,6 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
   }
-
-  setTimeout(() => {
-    handleGiftTap();
-  }, 900);
 
   cta?.addEventListener('click', () => {
     const title = document.querySelector('h1');
